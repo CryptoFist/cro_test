@@ -1,11 +1,14 @@
-import React  from 'react';
-import './App.scss';
-import Assessments from './components/Assessments'
+import React from "react";
+import "./App.scss";
+import Assessments from "./components/Assessments";
+import GlobalState from "./context/GlobalState";
 
 export default function App() {
-    return (
+  return (
+    <GlobalState>
       <div className="App">
-          <Assessments />
+        <Assessments />
       </div>
-    );
+    </GlobalState>
+  );
 }

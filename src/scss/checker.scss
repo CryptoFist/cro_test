@@ -1,0 +1,25 @@
+.purple-cell {
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+  }
+}
+
+.green-cell {
+  background-color:$secondaryColor;
+  color: $primaryColor;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+  }
+}

@@ -1,31 +1,25 @@
-import React  from 'react';
+import React from "react";
 
-export default function ReduxAssessmentTable() {
+export default function ReduxAssessmentTable({ rows }) {
   return (
     <table id="reduxAssessmentTable">
       <thead>
         <tr>
-          <th>head1</th>
-          <th>head2</th>
-          <th>head3</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Image</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>cell1_1</td>
-          <td>cell2_1</td>
-          <td>cell3_1</td>
-        </tr>
-        <tr>
-          <td>cell1_2</td>
-          <td>cell2_2</td>
-          <td>cell3_2</td>
-        </tr>
-        <tr>
-          <td>cell1_3</td>
-          <td>cell2_3</td>
-          <td>cell3_3</td>
-        </tr>
+        {rows.map((row) => (
+          <tr key={row.id}>
+            <td>{row.title}</td>
+            <td>{row.description}</td>
+            <td>
+              <img alt="description" src={row.image} />
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
